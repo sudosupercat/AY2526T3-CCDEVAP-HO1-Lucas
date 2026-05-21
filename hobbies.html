@@ -2,63 +2,80 @@
 <html>
     <head>
         <title>Matthew's Page</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Unica+One&display=swap" rel="stylesheet">
     </head>
     <body>
         <!-- Navigation links -->
-        <nav>
-            <span>Matthew Gabriel A. Lucas</span>
-            <a href="index.html">Home</a> | 
-            <a href="cv.html">CV</a> | 
-            <a href="hobbies.html">Hobbies</a> | 
-            <a href="contact.html">Contact Me</a>
-        </nav>
+        <div id="nav-bar">
+            <span>Matthew Gabriel Lucas</span>
+            <div id="nav-bar-links">
+                <nav>
+                    <a href="index.html">Home</a> <b>|</b> 
+                    <a href="cv.html">CV</a> <b>|</b> 
+                    <a href="hobbies.html"><b>Hobbies</a> |</b> 
+                    <a href="contact.html">Contact Me</a>
+                </nav>
+            </div>
+        </div>
         <hr>
 
-        <!-- Hobbies jump links -->
-        <nav>
-            <a href="#kcontent">K-Content</a> | 
-            <a href="#homelab">Homelab</a>
-        </nav>
-
-        <!-- K-content section -->
-        <h2>K-Content</h2>
-        <div>
-            <h3>Favorite K-Drama</h3>
-            <img src="img/beyond-evil.jpg" alt="Beyond Evil 2021 poster">
-        </div>
-        <div>
-            <h3>Favorite K-Drama Clip</h3>
-            <video controls>
-                <source src="video/welcometowaikiki_gwenchanagwenchana.mp4" type="video/mp4">
-            </video>
-            <p>The famous "gwenchana gwenchana" scene from the series Welcome to Waikiki Episode 5.</p>
-        </div>
-        <div>
-            <h3>Favorite K-Pop Song</h3>
-            <audio controls>
-                <source src="audio/itzy-notshy.m4a" type="audio/mpeg">
-            </audio>
-            <p>Not Shy by ITZY</p>
-        </div>
-
-        <!-- Homelab section -->
-        <h2 id="homelab">Homelab</h2>
-        <h3>Setup specs</h3>
-        <div id="homelab-specs">
-            <ul>
-                <li>CPU: Intel Core i5 3470</li>
-                <li>RAM: 8GB DDR3</li>
-                <li>Storage: 1x 500GB SSD, 2x 1TB HDD, 1x 2TB HDD</li>
-                <li>OS: Windows 10 Pro</li>
-            </ul>
-        </div>
-
-        <h3>Services running</h3>
-        <div id="homelab-apps">
-            <img src="img/jellyfin.png" alt="Jellyfin logo">
-            <img src="img/tailscale.png" alt="Tailscale logo">
-            <img src="img/qbittorrent.png" alt="qBittorrent logo">
-            <img src="img/file-server.png" alt="File server logo">
+        <div class="content-container">
+            <!-- Hobbies jump links -->
+            <div id="nav-bar-jump">
+                <nav>
+                    <a href="#kcontent">K-Content</a> <b>|</b> 
+                    <a href="#homelab">Homelab</a>
+                </nav>
+            </div>
+    
+            <!-- K-content section -->
+            <h2 id="kcontent" class="hobbies">K-Content</h2>
+            <div id="kcontent-container">
+                <div class="kcontent-element" id="kdrama-image">
+                    <h3>Favorite K-Drama</h3>
+                    <img src="img/beyond-evil.jpg" alt="Beyond Evil 2021 poster">
+                    <p>A crime-thriller drama about two policemen doing everything in their power to seek justice for their loved ones.</p>
+                </div>
+                <div class="kcontent-element" id="kdrama-video">
+                    <h3>Favorite K-Drama Clip</h3>
+                    <video controls>
+                        <source src="video/welcometowaikiki_gwenchanagwenchana.mp4" type="video/mp4">
+                    </video>
+                    <p>The famous "gwenchana gwenchana" scene from the series <i>Welcome to Waikiki</i> Episode 5.</p>
+                </div>
+                <div class="kcontent-element" id="kpop-audio">
+                    <h3>Favorite K-Pop Song</h3>
+                    <audio controls>
+                        <source src="audio/itzy-notshy.m4a" type="audio/mpeg">
+                    </audio>
+                    <p>Not Shy by ITZY</p>
+                </div>
+            </div>
+    
+            <!-- Homelab section -->
+            <h2 id="homelab" class="hobbies">Homelab</h2>
+            <div id="homelab-container">
+                <div id="homelab-specs">
+                    <h3 class="hobbies">Setup specs</h3>
+                    <ul>
+                        <li>CPU: Intel Core i5 3470</li>
+                        <li>RAM: 8GB DDR3</li>
+                        <li>Storage: 1x 500GB SSD, 2x 1TB HDD, 1x 2TB HDD</li>
+                        <li>OS: Windows 10 Pro</li>
+                        <li>Internet: 300Mbps PLDT Home Fiber</li>
+                    </ul>
+                </div>
+        
+                <div id="homelab-apps">
+                    <h3 class="hobbies">Services running</h3>
+                    <img src="img/jellyfin.png" title="Jellyfin" alt="Jellyfin logo"> 
+                    <img src="img/tailscale.png" title="Tailscale" alt="Tailscale logo">
+                    <img src="img/file-server.png" title="SMB File Server" alt="File server logo">
+                </div>
+            </div>
         </div>
     </body>
 </html>
